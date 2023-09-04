@@ -12,8 +12,8 @@ export default function Logout() {
   }, [])
 
   return (
-    <Card title='Logout'>
-      <Loader loading/>
+    <Card>
+      <Loader loading title='Logout...'/>
     </Card>
   )
 }

@@ -72,11 +72,8 @@ function AuthorizeView() {
 
   const renderLoading = () => {
     return (
-      <Card
-        title="Loading..."
-        customContainerClass="authorizeForm__form"
-      >
-        <Loader loading={loading}/>
+      <Card customContainerClass="authorizeForm__form">
+        <Loader loading title='Loading...'/>
       </Card>
     )
   }
@@ -89,7 +86,6 @@ function AuthorizeView() {
       title={title[formType]}
       customContainerClass="authorizeForm__form"
     >
-
       {isLogin && <LoginForm buttonText={title.login} onSubmit={sendLoginForm}/>}
       {isSignUp && <SignUpForm buttonText={title.signUp} onSubmit={sendSignUpForm}/>}
       {renderSwitchToAnotherFormText({isLogin, isSignUp})}
