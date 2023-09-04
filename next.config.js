@@ -3,13 +3,14 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  async rewrites() {
-    return [
-      {
-        source: '/:path*',
-        destination: '/',
-      },
-    ];
-  },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: '/:path*',
+  //       destination: '/',
+  //     },
+  //   ];
+  // },
+  output: "export",
 };
 module.exports = nextConfig
