@@ -1,0 +1,20 @@
+
+.simple-button {
+    position: relative;
+    overflow: hidden;
+    padding: 10px 20px;
+    background-color: oklch(63% 0.218 295.41);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .simple-button:hover {
+    background-color: oklch(67.06% 0.16 269);
+  }
+
+.simple-button:disabled{
+  background-color: #999;
+}

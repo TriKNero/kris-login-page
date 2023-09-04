@@ -1,0 +1,25 @@
+.card__container {
+  width: 340px;
+  min-height: 420px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.card__contentContainer {
+  display: flex;
+  margin: 0 auto;
+  padding: 20px;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card__title {
+  display: flex;
+  justify-content: flex-start;
+  color: #000;
+  font-size: 20px;
+  line-height: 2;
+}

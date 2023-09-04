@@ -1,0 +1,20 @@
+.background {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #007bff, #ff0000, #000000);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+
+  .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #000;
+    font-size: 14px;
+  }

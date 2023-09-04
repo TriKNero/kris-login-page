@@ -1,0 +1,28 @@
+.loginForm-switchToAnotherFormText {
+  color: #999;
+  font-size: 14px;
+}
+
+
+
+/* Extra Small Devices */
+@media (max-width: 576px) {
+  .authorizeForm__form {
+    width: 100%;
+  }
+}
+
+/* Small Devices */
+@media (min-width: 577px) and (max-width: 768px) {
+  .authorizeForm__form {
+    width: 100%;
+  }
+}
+
+/* Medium Devices */
+@media (min-width: 769px) and (max-width: 992px) {
+  .authorizeForm__form {
+    width: 60% !important;
+  }
+}
+
