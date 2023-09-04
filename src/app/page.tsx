@@ -1,7 +1,7 @@
 'use client';
 import React, {useState} from "react";
 import AuthorizeView from "@/components/molecules/authorize-form/authorize-view"
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {HashRouter as Router, Routes, Route} from 'react-router-dom';
 import NotFound from "@/components/organism/not-found/not-found";
 import {Navigate} from 'react-router-dom';
 import MainPage from "@/components/organism/main-page/main-page";
@@ -21,7 +21,7 @@ export default function Home() {
   }
   const isAuthenticated = Boolean(userInfo)
   return (
-    <Router>
+    <Router basename="/">
       <ReactContext.Provider
         value={{
           userInfo,
