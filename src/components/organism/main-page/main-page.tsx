@@ -18,7 +18,7 @@ export default function MainPage() {
         width={200}
         height={200}
         style={{borderRadius: "100%"}}
-        src="/photo-min.jpg"
+        src="./photo-min.jpg"
         alt=""
       />
 
