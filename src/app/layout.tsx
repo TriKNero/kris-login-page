@@ -1,15 +1,12 @@
 'use client';
 
-import './globals.css';
 import React from 'react';
-import {Inter} from 'next/font/google';
 import dynamic from 'next/dynamic'
 
 const MainLayout = dynamic(
   () => import('@/components/organism/main-layout/main-layout'),
   { ssr: false }
 )
-const inter = Inter({subsets: ['latin']})
 
 export default function RootLayout(
   {
@@ -27,7 +24,7 @@ export default function RootLayout(
       <title>Login page by Kristian Korneev</title>
       <meta name="description" content="Web site created using create-react-app"/>
     </head>
-    <body className={inter.className}>
+    <body>
     <MainLayout>
       {children}
     </MainLayout>

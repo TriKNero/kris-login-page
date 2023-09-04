@@ -38,7 +38,7 @@ export default function Home() {
             element={isAuthenticated ? <MainPage/> : <Navigate to={routes.login}/>}
           />
           <Route path={routes.logout} element={isAuthenticated ? <Logout/> : <Navigate to={routes.login}/>}/>
-          <Route path="*" element={<NotFound isAuthenticated={isAuthenticated}/>}/>
+          <Route path="*" element={<NotFound />}/>
         </Routes>
       </ReactContext.Provider>
     </Router>
