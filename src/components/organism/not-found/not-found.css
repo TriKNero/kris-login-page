@@ -3,3 +3,13 @@
   height: 50px;
   line-height: 25px;
 }
+
+.notFound__imageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.notFound__linkContainer {
+  display: flex;
+  justify-content: center;
+}
