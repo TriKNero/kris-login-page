@@ -60,7 +60,7 @@ function AuthorizeView() {
   const renderSwitchToAnotherFormText = ({isSignUp, isLogin}) => {
     return (
       <div className="loginForm-switchToAnotherFormText">
-        {isLogin && <>Don't have an account? <p><Link onClick={switchToSingUp}>Sign up now!</Link></p></>}
+        {isLogin && <>{`Don't have an account? `}<p><Link onClick={switchToSingUp}>Sign up now!</Link></p></>}
         {isSignUp && <>Already have an account? <p><Link onClick={switchToLogIn}>Log in</Link></p></>}
       </div>
     )

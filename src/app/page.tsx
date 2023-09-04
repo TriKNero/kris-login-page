@@ -12,7 +12,8 @@ export const ReactContext = React.createContext({});
 
 
 export default function Home() {
-  const [userInfo, setUserInfo] = useState(JSON.parse(localStorage.getItem('userInfo')));
+  const defaultUserInfo = global?.localStorage?.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null
+  const [userInfo, setUserInfo] = useState(defaultUserInfo);
   const setUserInfoHandler = (userInfo) => {
     console.log('userInfo', userInfo)
     if (userInfo) localStorage.setItem('userInfo', JSON.stringify(userInfo))
