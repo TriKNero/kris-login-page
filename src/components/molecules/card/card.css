@@ -1,5 +1,5 @@
 .card__container {
-  width: 340px;
+  width: 400px;
   min-height: 420px;
   background-color: #fff;
   border-radius: 8px;
@@ -10,7 +10,6 @@
 
 .card__contentContainer {
   display: flex;
-  margin: 0 auto;
   padding: 20px;
   flex-direction: column;
   gap: 16px;

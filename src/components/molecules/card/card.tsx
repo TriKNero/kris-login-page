@@ -5,14 +5,16 @@ import React from "react";
 interface CardProps {
   children: React.ReactNode,
   title?: string | React.ReactNode,
-  customContainerClass?: string
+  customContainerClass?: string,
+  customContentClass?: string
 }
 
 function Card(
   {
     children,
     title,
-    customContainerClass
+    customContainerClass,
+    customContentClass
   }: CardProps) {
   const renderTitle = () => {
     if (!title) return null;
@@ -23,10 +25,11 @@ function Card(
     )
   }
   const containerClasses = customContainerClass ? `card__container ${customContainerClass}` : "card__container"
+  const contentClasses = customContentClass ? `card__contentContainer ${customContentClass}` : "card__contentContainer"
   return (
     <div className={containerClasses}>
       {renderTitle()}
-      <div className="card__contentContainer">
+      <div className={contentClasses}>
         {children}
       </div>
     </div>

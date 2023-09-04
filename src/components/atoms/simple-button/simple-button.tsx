@@ -1,14 +1,13 @@
-
 'use client'
 
-import React, { useRef } from "react";
+import React, {useRef} from "react";
 import "./simple-button.css";
 
-interface ISimpleButton {
+interface ISimpleButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   buttonText: string;
 }
 
-function SimpleButton({ buttonText, ...others }: ISimpleButton) {
+function SimpleButton({buttonText, ...others}: ISimpleButton) {
 
   return (
     <button
@@ -21,4 +20,4 @@ function SimpleButton({ buttonText, ...others }: ISimpleButton) {
 }
 
 
-export { SimpleButton }
+export {SimpleButton}

@@ -17,7 +17,7 @@ function SignUpForm({buttonText, onSubmit}: SignUpFormProps) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [password2, setPassword2] = useState('')
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState({} as { [key: string]: string });
 
 
   const checkEmail = () => setErrors(validateEmail(errors, email))
@@ -31,7 +31,7 @@ function SignUpForm({buttonText, onSubmit}: SignUpFormProps) {
   const sendForm = async () => {
     try {
       await onSubmit({email, password})
-    } catch (e) {
+    } catch (e: any) {
       console.log('error - ', e)
       setErrors({...errors, [errorTypes.server]: e.message})
     }

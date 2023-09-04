@@ -3,8 +3,12 @@
 import './globals.css';
 import React from 'react';
 import {Inter} from 'next/font/google';
-import MainLayout from "@/components/organism/main-layout/main-layout";
+import dynamic from 'next/dynamic'
 
+const MainLayout = dynamic(
+  () => import('@/components/organism/main-layout/main-layout'),
+  { ssr: false }
+)
 const inter = Inter({subsets: ['latin']})
 
 export default function RootLayout(

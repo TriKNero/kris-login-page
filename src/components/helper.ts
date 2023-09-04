@@ -37,16 +37,28 @@ export const validateRepeatPassword = (errors: errorsI, password: string, passwo
 
 export const initCustomFetch = () => {
   const originalFetch = global.fetch;
-  const customFetch = (url, {method, body}) => {
+
+  const customFetch = (url: string, {method, body}: { method: string, body: string }) => {
     const bodyJson = JSON.parse(body);
     return new Promise((resolve) => {
       if (url === apiEndpoints.login) {
-        setTimeout(() => resolve({status: 200, ok: 200, json: () => Promise.resolve({userName: bodyJson?.email})}), 2000)
+        setTimeout(() => resolve({
+          status: 200,
+          ok: 200,
+          json: () => Promise.resolve({userName: bodyJson?.email})
+        }), 2000)
       } else if (url === apiEndpoints.signUp) {
-        setTimeout(() => resolve({status: 200, ok: 200, json: () => Promise.resolve({userName: bodyJson?.email})}), 2000)
-      } else return resolve(originalFetch(url, {method, body}))
+        setTimeout(() => resolve({
+          status: 200,
+          ok: 200,
+          json: () => Promise.resolve({userName: bodyJson?.email})
+        }), 2000)
+      } else {
+        return resolve(originalFetch(url, {method, body}))
+      }
     });
   };
 
+  // @ts-ignore
   global.fetch = customFetch;
 }

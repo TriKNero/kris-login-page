@@ -9,7 +9,9 @@ interface ISimpleInput {
   labelText: string,
   type?: string,
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void,
-  otherProps?: any
+  errorText?: string,
+  placeholder?: string,
+  otherProps?: any,
 }
 
 function SimpleInput(

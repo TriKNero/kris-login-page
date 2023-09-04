@@ -17,7 +17,7 @@ interface LoginFormProps {
 function LoginForm({buttonText, onSubmit}: LoginFormProps) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState({} as { [key: string]: string });
 
   const checkLogin = () => setErrors(validateEmail(errors, email));
   const checkPassword = () => setErrors(validatePassword(errors, password));
@@ -28,7 +28,7 @@ function LoginForm({buttonText, onSubmit}: LoginFormProps) {
   const sendForm = async () => {
     try {
       await onSubmit({email, password})
-    } catch (e) {
+    } catch (e: any) {
       setErrors({...errors, [errorTypes.server]: e.message})
     }
   }

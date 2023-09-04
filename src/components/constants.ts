@@ -18,10 +18,12 @@ export const apiEndpoints = {
   logout: 'http://localhost:3000/api/auth/logout',
 }
 
+export type formKeysType = {login: "login", signUp: "signUp"};
 export const formsKeys = {
   login: "login",
   signUp: "signUp"
-}
+} as formKeysType;
+
 export const title = {
   login: "Log-in",
   signUp: "Sign up"

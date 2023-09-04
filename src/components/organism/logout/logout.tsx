@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import {Card} from "@/components/molecules/card/card";
 import Loader from "@/components/atoms/loader/loader";
-import {ReactContext} from "@/app/page";
+import {ReactContext} from "@/app/context";
 
 
 export default function Logout() {
