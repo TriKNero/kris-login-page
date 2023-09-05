@@ -11,7 +11,12 @@ export default function Custom404() {
     >
       {`Look's like page that are you looking for not exists, please follow next link to go to the home page`}
       <div className="notFound__imageContainer">
-        <Image width={200} height={200} src="./404-error.png"/>
+        <Image
+          width={200}
+          height={200}
+          src="./404-error.png"
+          alt=""
+        />
       </div>
       <p className="notFound__linkContainer">
         <a className="link" href="https://kristiankorneev.github.io/kris-login-page/">{` Go to the home page`}</a>
