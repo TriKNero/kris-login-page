@@ -6,7 +6,8 @@ interface CardProps {
   children: React.ReactNode,
   title?: string | React.ReactNode,
   customContainerClass?: string,
-  customContentClass?: string
+  customContentClass?: string,
+  id?: string
 }
 
 function Card(
@@ -14,8 +15,10 @@ function Card(
     children,
     title,
     customContainerClass,
-    customContentClass
+    customContentClass,
+    id
   }: CardProps) {
+
   const renderTitle = () => {
     if (!title) return null;
     return (
@@ -24,10 +27,11 @@ function Card(
       </div>
     )
   }
+
   const containerClasses = customContainerClass ? `card__container ${customContainerClass}` : "card__container"
   const contentClasses = customContentClass ? `card__contentContainer ${customContentClass}` : "card__contentContainer"
   return (
-    <div className={containerClasses}>
+    <div className={containerClasses} id={id || ''}>
       {renderTitle()}
       <div className={contentClasses}>
         {children}

@@ -5,6 +5,7 @@ import "./simple-button.css";
 
 interface ISimpleButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   buttonText: string;
+  id?: string;
 }
 
 function SimpleButton({buttonText, ...others}: ISimpleButton) {

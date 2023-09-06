@@ -48,12 +48,14 @@ function SignUpForm({buttonText, onSubmit}: SignUpFormProps) {
   return (
     <>
       <SimpleInput
+        id="signup-email"
         labelText="Email"
         onChange={setEmailDebounced}
         errorText={errors[errorTypes.email]}
         placeholder={placeholders.email}
       />
       <SimpleInput
+        id="signup-password"
         labelText="Password"
         type="password"
         onChange={setPasswordDebounced}
@@ -61,6 +63,7 @@ function SignUpForm({buttonText, onSubmit}: SignUpFormProps) {
         placeholder={placeholders.password}
       />
       <SimpleInput
+        id="signup-password2"
         labelText="Repeat password"
         type="password"
         onChange={setPassword2Debounced}
@@ -68,6 +71,7 @@ function SignUpForm({buttonText, onSubmit}: SignUpFormProps) {
         placeholder={placeholders.password}
       />
       <SimpleButton
+        id="signup-submit"
         buttonText={buttonText}
         onClick={sendForm}
         disabled={disableButton()}

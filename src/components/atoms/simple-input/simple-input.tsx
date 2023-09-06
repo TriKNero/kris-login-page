@@ -12,22 +12,23 @@ interface ISimpleInput {
   errorText?: string,
   placeholder?: string,
   otherProps?: any,
+  id?: string
 }
 
 function SimpleInput(
   {
     labelText,
     type = "text",
-    onChange,
     errorText,
+    id,
     ...otherProps
   }: ISimpleInput) {
-  const inputClasses = errorText ? `simpleInput__input-error`: "simpleInput__input"
+  const inputClasses = errorText ? `simpleInput__input-error` : "simpleInput__input"
   return (
     <>
       <SimpleInputLabel labelText={labelText}/>
-      <input onChange={onChange} {...otherProps} className={inputClasses} type={type}/>
-      <ErrorHint errorText={errorText}/>
+      <input {...otherProps} id={id} className={inputClasses}/>
+      <ErrorHint errorText={errorText} id={`error-${id}`}/>
     </>
   )
 }

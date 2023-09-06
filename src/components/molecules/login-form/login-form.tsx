@@ -39,12 +39,14 @@ function LoginForm({buttonText, onSubmit}: LoginFormProps) {
   return (
     <>
       <SimpleInput
+        id="login-email"
         labelText="Email"
         onChange={setEmailDebounced}
         errorText={errors[errorTypes.email]}
         placeholder={placeholders.email}
       />
       <SimpleInput
+        id="login-password"
         labelText="Password"
         type="password"
         onChange={setPasswordDebounced}
@@ -52,6 +54,7 @@ function LoginForm({buttonText, onSubmit}: LoginFormProps) {
         placeholder={placeholders.password}
       />
       <SimpleButton
+        id="login-submit"
         buttonText={buttonText}
         onClick={sendForm}
         disabled={disabled}
