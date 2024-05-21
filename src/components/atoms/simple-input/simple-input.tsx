@@ -1,8 +1,8 @@
 'use client'
 import React from "react"
-import {SimpleInputLabel} from "./simple-input-label"
+import { SimpleInputLabel } from "./simple-input-label"
 import "./simple-input.css"
-import {ErrorHint} from "@/components/atoms/error-hint/error-hint";
+import { ErrorHint } from "@/components/atoms/error-hint/error-hint";
 
 
 interface ISimpleInput {
@@ -18,7 +18,6 @@ interface ISimpleInput {
 function SimpleInput(
   {
     labelText,
-    type = "text",
     errorText,
     id,
     ...otherProps
@@ -26,11 +25,11 @@ function SimpleInput(
   const inputClasses = errorText ? `simpleInput__input-error` : "simpleInput__input"
   return (
     <>
-      <SimpleInputLabel labelText={labelText}/>
-      <input {...otherProps} id={id} className={inputClasses}/>
-      <ErrorHint errorText={errorText} id={`error-${id}`}/>
+      <SimpleInputLabel labelText={labelText} />
+      <input {...otherProps} id={id} className={inputClasses} />
+      <ErrorHint errorText={errorText} id={`error-${id}`} />
     </>
   )
 }
 
-export {SimpleInput};
+export { SimpleInput };
